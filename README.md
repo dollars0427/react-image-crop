@@ -69,6 +69,15 @@ var crop = {
 
 Please note that the values will be adjusted if the cropping area is outside of the image boundaries.
 
+If you passed crop values, it should be updated when crop completed too, or the cropping area will disappear.
+For examples:
+
+```jsx
+onComplete(crop) {
+  this.props.crop = crop;
+}
+```
+
 #### minWidth (optional)
 
 A minimum crop width, as a percentage of the image width.
